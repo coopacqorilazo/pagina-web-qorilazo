@@ -1,0 +1,32 @@
+@import "../../styles.css";
+.linea_superior{
+    border-top: 2px groove var(--light);
+    margin: 0 1em;
+}
+
+.row{    
+    margin-top: 2em;
+}
+.column{
+    line-height: 2em;
+    padding: 1.1em;
+    *border: 1px solid #000; 
+    color: var(--gray); 
+    font-size: 1.1em;  
+}
+.opciones a{
+    color: var(--gray);
+}
+.grupo_imagenes img{
+    width: 6em;
+    height: 6em;
+    margin: auto;
+    padding-bottom: 1em;
+    display: block;
+}
+.derecho_reservado{
+    background-color: var(--gray-dark);
+    padding: 2em 1em;
+    text-align: center;
+    color: var(--light);
+}

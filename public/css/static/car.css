@@ -1,0 +1,47 @@
+@import "../../styles.css";
+
+.container-sec{
+  padding: 1em;
+  background-color: var(--blue);
+}
+.wpb-title{
+  padding: 1em 1em;
+  font-size: 2em;
+}
+.body-card{
+	display: flex;
+}
+.wpb-column{
+  background-color: var(--white);
+  margin: 1em;
+  padding: 2em .5em;
+  border-radius: 1em;
+  text-align: center;
+}
+.wpb-boton{
+  padding: 1em;
+  text-align: center;
+}
+.single-image-wrapper{
+  width: 100%;
+  box-sizing: border-box;
+}
+.attachment-full{
+  width: 100%;
+  padding: 2em 1em;
+}
+
+@media screen and (max-width: 1150px){
+  .body-card{
+    display: block;
+  }
+  .container-sec{
+    display: block !important;
+  }
+  .container-sec .col-md-8{
+    width: 100%;
+  }
+  .col-per{
+    display: none;
+  }
+}

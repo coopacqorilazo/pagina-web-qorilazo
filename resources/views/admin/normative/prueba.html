@@ -1,0 +1,101 @@
+<html>
+
+<head>
+    <title>Embed PDF</title>
+    <script language="JavaScript">
+        function loadpdf() {
+
+            var path = "";
+            document.getElementById("pdf").src = path + "#toolbar=0&statusbar=0&navpanes=0";
+            document.getElementById("pdf").style.display = "block";
+            document.getElementById("pdf").style.visibility = "visible";
+
+            document.getElementById("nomenu").style.display = "block";
+            document.getElementById("nomenu").style.visibility = "visible";
+
+            document.getElementById("loading").style.visibility = "hidden";
+
+        }
+
+        function loadfunctions() {
+
+            window.addEventListener("keyup", keydetect, false);
+
+        }
+
+        function keydetect(e) {
+            if (e.keyCode == "44")
+                copytoclipboard("No esta permitido copiar y pegar este PDF sin permiso del autor. Disculpe las molestias.");
+
+        }
+
+
+        function copytoclipboard(str) {
+            try {
+
+                if (navigator.userAgent.toLowerCase().indexOf("firefox") < 0 && navigator.userAgent.toLowerCase().indexOf("chrome") < 0 && navigator.userAgent.toLowerCase().indexOf("webkit") < 0)
+                    window.clipboardData.setData("Text", str);
+                else {
+
+                    try {
+
+                        if (navigator.userAgent.toLowerCase().indexOf("firefox") < 0) {
+
+                            var textArea = document.createElement("textarea");
+
+                            textArea.style.position = "fixed";
+                            textArea.style.top = 0;
+                            textArea.style.left = 0;
+                            textArea.style.width = "2em";
+                            textArea.style.height = "2em";
+                            textArea.style.padding = 0;
+                            textArea.style.border = "none";
+                            textArea.style.outline = "none";
+                            textArea.style.boxShadow = "none";
+                            textArea.style.background = "transparent";
+
+                            textArea.value = str;
+
+                            document.body.appendChild(textArea);
+                            textArea.focus();
+                            textArea.select();
+
+                            document.execCommand('copy');
+                            document.body.removeChild(textArea);
+
+                        }
+                        else
+                            alert(str);
+
+                    }
+                    catch (ex) {
+                    }
+
+                }
+
+            }
+            catch (e) {
+            }
+
+
+        }
+    </script>
+</head>
+
+<body oncontextmenu="return false;" onkeydown="return false;" onselectstart="return false;" ondragstart="return false;"
+    onload="javascript:loadfunctions();">
+
+    
+
+    <div id="loading" style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;">
+        <font class='defaulttext'>Cargando, espere un momento por favor...</font>
+    </div>
+    <iframe src="https://www.cacqorilazo.com/documentacion/TarifarioDPF.pdf" id="pdf" frameborder="0" width="100%" height="100%" style="visibility: hidden;"
+        onload="javascript:loadpdf();">Su navegador web no soporta iframes.</iframe>
+    <div id="nomenu"
+        style="position: absolute; left: 0px; top: 0px; width: 98%; height: 100%; visibility: hidden; z-index: 1000;">
+    </div>
+
+</body>
+
+</html>

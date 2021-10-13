@@ -1,0 +1,600 @@
+@import '../../styles.css';
+:root{
+    --color-prin:rgb(255, 255, 0);
+    --color-verde:rgb(0, 40, 0);
+    --color-rojo:rgb(177, 39, 39);
+    --color-verdeclaro:rgb(0, 204, 0);
+    --color-naranja:rgb(255, 102, 0);
+    --color-azul:rgb(0, 0, 153);
+    --color-celeste:rgb(102, 204, 255);
+
+}
+
+
+
+
+/*cuerpo del contenido*/
+.content_section_body{
+    font-size: 1em;    
+    margin: 1.5em;
+    box-sizing: border-box;
+    z-index: 10;
+}
+.content_section_body>ul{  
+    
+    display: flex;
+    box-sizing: border-box;
+    margin: 0 0em;
+}
+
+
+.content_section_body>ul>li{
+    
+    position: relative;
+    width: 16%;
+    /*border: 1px solid #000;*/
+    *background: var(--light);
+    margin-right: 0em;
+    *border-radius: .8em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;       
+    padding: .5em 1em 2em 1em;
+    cursor:pointer; 
+    border-bottom: 2px solid var(--light); 
+}
+.content_section_body>ul>li:hover{
+    *background:var(--color-verde);
+    color: var(--green);
+    
+}
+.content_section_body>ul>li.active{
+    *background:var(--color-verde);
+    color: var(--green); 
+    border-bottom: 2px solid var(--green);
+}
+
+/*
+.content_section_body>ul>li::before{
+    content: '';
+    position: absolute;
+    left: 40%;
+    top: 100%;  
+    border-style: solid;
+    border-width: .8em 1em 0em 1em;
+    border-color: var(--color-verde) transparent transparent transparent;
+    
+    visibility: hidden;    
+}
+
+.content_section_body>ul>li:hover::before{
+    visibility: visible;
+   
+}
+.content_section_body>ul>li.active::before{
+    visibility: visible;
+}*/
+
+.content_section_body>ul>li:last-child{
+    margin-right: 0;
+}
+.content_section_body_view{
+    margin-top: 3em;
+    margin-bottom: 2em;
+}
+
+/*paneles del tab*/
+.content_info {
+    *background: rgba(255, 255, 0, .05);
+    padding: .5em 1em;   
+    position: absolute;
+    left: -1000%;
+    display: flex;
+    flex-direction: column;
+    *border: 1px solid rgba(255, 255, 0, .20);
+}
+.title-content{
+    font-size: 1.3em;
+    color: var(--blue);
+    margin: 1em;
+}
+.subtitle-content{
+    font-size: 1.1em;
+    color: var(--blue);
+    margin: 1em;
+}
+/*Caracteristicas del producto*/
+.content_info p{
+    font-size: 1.2em;
+    *padding-top: 1em;
+    text-align: justify;
+    *font-weight: bold;
+    line-height: 1.8em;
+}
+.tablas{
+    width: 80%;
+    margin: 1em auto;
+    font-size: 1em;
+    display: grid;    
+    grid-template-columns: 1fr 1fr; 
+    grid-column-gap: 5em;   
+    box-sizing: border-box;
+    line-height: 1em;
+}
+.tablas>div{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.tablas>div>h4{
+    grid-column: 1/4;
+    font-size: 1.4em;
+    font-weight: bold;
+    text-align: center;
+    color:var(--color-verde);
+    padding: .5em 0 .1em 0em;
+}
+.table{
+    padding: .8em 0;    
+    display: grid;
+    grid-template-rows: repeat(2,4em);
+    align-items: center;
+}
+.table-header{    
+    height: 100%;
+    margin: 0;
+    padding: 2em;
+    color:rgb(255,255,255);
+    font-weight: 700;
+    max-height: 2.1em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top: 1px solid rgb(255,255,255);
+    border-left: 1px solid rgb(255,255,255);
+    border-right: 1px solid rgb(255,255,255);
+    background: var(--color-verde);
+}
+.table-row{
+    height: 4em !important;
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;    
+    background: rgba(255, 255, 0, 0.4);
+    border: 1px solid rgb(255,255,255);
+    color:var(--color-verde);
+    max-height: 4em !important;
+    padding: 2.1em !important;
+    font-size: 1em !important;
+    line-height: .8em !important;
+    
+}
+.info_adicional{
+    width: 80%;
+    margin:0 auto;
+    font-size: .8em;
+    margin-bottom: 5em;
+}
+.content_info.active{    
+    left: 0;
+    position: relative;
+}
+
+/*Beneficios del producto*/
+
+#beneficios div img{
+    width: 15rem;
+}
+
+
+.list-cont{
+    padding-left: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.list-cont>li{
+    line-height: 1em;
+    padding-left: 1.4em;
+    margin-top: 1em;    
+    font-size: 1.2em;
+    *font-weight: bold;
+    background: url("../images/checked16px.png");
+    background-repeat: no-repeat;
+    background-position-y: .1em;    
+}
+
+/*Requisitos */
+
+/*Generales*/
+/*
+#requisitos{
+    line-height: 2em;
+
+}
+#requisitos ul li{    
+    padding-left: 1.4em;    
+    font-size: 1.3em;    
+    background: url("../images/checked16px.png");
+    background-repeat: no-repeat;
+    background-position-y: center;
+}
+/*Especificos*/
+/*#requisitos>h3{
+  font-size: 3em;
+  color: blue;
+  padding-bottom: .5em;  
+}*/
+
+
+/*
+#requisitos>div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2em;
+}
+
+#requisitos>div>div>div{
+    display: flex;
+    
+}*/
+
+.ico{
+    width: 1em;
+    height: 1em;
+    font-size: 4em;
+    color: var(--green);
+    border: .5px solid var(--green);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+
+
+/*Tarifario y comisiones// Simulador*/
+
+/*
+#tarifario>div{
+    padding: 3em 1em;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-column-gap: 2em;
+    grid-row-gap: 3em;
+}
+#simulador>div{
+    padding: 3em 1em;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);    
+    grid-column-gap: 2em;
+    grid-row-gap: 3em;
+}*/
+.card-table{
+    display: grid;
+    grid-template-columns: 3.5fr 5.5fr 1fr;
+    border: .1em solid var(--color-verde);
+    border-radius: .5em;
+}
+
+.card-table p{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1.2em;
+    text-align: justify;    
+    color: var(--color-azul);
+    padding: 0em .5em;
+    border-right: .1em solid var(--color-verde);
+}
+
+.card-table h3{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    align-content: center;
+    font-size: 1.2em;
+    text-align: justify;
+    color: var(--color-azul);
+    padding: 0em .5em;
+    border-right: .1em solid var(--color-verde);
+}
+
+.card-table a {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    align-content: center;
+    margin:auto;
+    padding: 0em .5em;
+}
+
+.card-table .ico{
+    border-radius: 0;
+    border: none;
+    color: var(--danger);
+    font-size: 2em;
+}
+.card-media{
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 3.5fr 5.5fr 1fr;
+    border: .1em solid var(--color-verde);
+    border-radius: .5em;
+    align-content: center;
+    margin: 0 auto;
+    width: 60%;
+}
+
+.card-faq{
+    margin-top: 1.5em;
+    padding-left: 3em;    
+    font-size: 1.3em;
+    line-height: 1.8em;
+}
+.card-faq h4{
+    color: var(--orange);
+    font-size: 1em;
+    margin-top: 1em;
+}
+
+
+/*Informacion Clave pie de pagina estaticos*/
+.info_clave{
+    margin-top: 0em;
+    display: flex;   
+    margin-bottom: 1em;
+    box-sizing: border-box;
+}
+.info_clave>div{    
+    flex: auto;
+    display: flex;    
+    background: -webkit-linear-gradient(45deg, rgba(255, 255, 0, 0.1) 10%, rgba(146, 228, 92, 0.1) 90%);
+    background: -moz-linear-gradient(45deg, rgba(255, 255, 0, 0.1) 10%, rgba(146, 228, 92, 0.1) 90%);
+}
+.info_clave>div:last-child{
+    border: none;
+}
+.info_clave div .icon{
+    font-size: 4em;
+    color: rgb(27, 14, 145);
+    padding: .1em .2em;
+}
+.info_clave div>h5{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2em;
+    color:var(--color-verde);
+    text-align: start;
+    font-weight: 700;
+    width: 45%;    
+    justify-content: center;
+
+}
+
+.info_clave div>p{
+    display: flex;
+    flex-direction: column;
+    font-size: 1em;
+    color:blue;
+    padding: 0em 1em;
+    text-align: start;
+    
+    justify-content: center;
+
+}
+
+
+@media (max-width:900px){
+    .content_section{
+        box-sizing: border-box;
+        width: 100%;
+        margin: .3em 0;
+        padding: .5em;        
+    }
+
+    
+    .content_section_body .tabs{
+       box-sizing: border-box;
+       display: grid;
+       -ms-grid-template-columns:1fr 1fr;
+       grid-template-columns: 1fr 1fr;
+       grid-column-gap: .5em;
+       grid-row-gap: .5em;
+       margin: 0 .2em;
+    }
+    
+    .content_section_body>ul>li{
+        box-sizing: border-box;
+        width: 100%;
+        height: 4em;
+    }
+
+    
+    .content_section_body_view{
+        margin-top: .2em;
+    }
+
+    .info_clave{
+        display:block;        
+    }
+    .info_clave>div{
+        border-bottom: 1px solid var(--blue);
+        padding: .5em;
+    }
+    .info_clave div .icon{
+        font-size: 2.5em;
+        color: var(--blue);
+        padding: .1em .2em;
+        width: 1.2em;
+    } 
+    .content_info{
+        padding-top: .2em;
+    }
+    .content_info>h3{
+        font-size: 1.8em;
+        margin-bottom: 0;
+    } 
+    #caracteristicas>p{
+        padding-top: .2em;
+        line-height: 1.5em;
+    }
+    .tablas{
+        display: block;
+        width: 100%;
+    }
+    .info_adicional{
+        width: 80%;
+        margin:0 auto;
+        color: brown;
+        font-size: .7em;        
+        margin-bottom: 1em;
+    }
+    /*Beneficios*/
+    #beneficios{    
+        padding-left: 1em;    
+        display: block;
+        font-size: 1em;
+        font-weight: normal;
+    }
+    #beneficios>div:nth-child(1){
+        display: block;
+    }
+    
+    #beneficios div h3{  
+        
+        padding-left: 0em;
+        padding-bottom: 0em;
+    }
+    #beneficios div ul{
+        padding-left: 0em;
+        padding-bottom: .5em; 
+        font-size: 1em;
+        font-weight: normal;            
+    }
+    #beneficios div ul li{
+        font-size: 1.1em;
+        line-height: 1.1em;
+        font-weight: normal;
+    }
+
+    #beneficios>div>ul>li:nth-child(1){
+        margin-top: .3em;        
+    }
+
+
+    /*Requistos*/
+    #requisitos{
+        line-height: 2em;
+    
+    }
+    #requisitos ul li{    
+        padding-left: 1.4em;    
+        font-size: 1.3em;    
+        background: url("../images/checked16px.png");
+        background-repeat: no-repeat;
+        background-position-y: center;
+    }
+    /*Especificos*/
+    /*#requisitos>h3{
+      font-size: 3em;
+      color: blue;
+      padding-bottom: .5em;  
+    }*/
+    #requisitos>h4{
+        font-size: 1.2em;
+        padding-top: .1em;
+        padding-bottom: .2em;
+    }
+    #requisitos ul li{
+        margin-left: 1em; 
+        font-size: 1.1em;
+        background-position-y: .2em;
+        margin: .5em 0;
+        text-align: justify; 
+        line-height: 1.3em;      
+    }
+    
+    #requisitos>div{
+        display: block;
+    }    
+    #requisitos>div>div>div{
+        display: flex;
+        
+    }
+    
+    #requisitos>div>div>div>.ico{
+        font-size: 3em;
+    }
+    
+    #requisitos>div>div>div>h3{
+        font-size: 1.3em;
+        font-weight: 700;    
+    }
+    #requisitos>p{
+        color: var(--color-verde);
+        text-align: justify;
+        line-height: 1.1em;
+        font-size: .8em;        
+        margin-bottom: 1em;
+    }
+
+    /*t y sim*/
+    #tarifario>div{
+        padding: 1em 0;
+        display: block;
+    }
+    #simulador>div{
+        padding: 1em 0em;
+        display: block;
+    }
+    #tarifario div div,#simulador div div{
+        display: grid;
+        margin-top: 1em;
+        grid-template-columns: 3.5fr 5fr 1.5fr;
+     
+    }
+    #tarifario div div h3, #simulador div div h3 {
+        font-size: 1em; 
+        height: auto;
+        text-align: center;
+        padding: 0 .3em;
+    }
+    #tarifario div div p, #simulador div div p{
+        font-size: 1em;
+        text-align: center;
+        padding: .3em;
+    } 
+/*preguntas frecuentes*/
+    #faq{
+        padding: 1em 0;
+    }
+    #faq>div{
+        padding-top: 1em;
+    }
+    #faq div div:nth-child(1){
+        grid-template-columns: 3.5fr 5fr 1.5fr;        
+        width: 100%;           
+    }
+    #faq div div:nth-child(1) h3 {
+        text-align:center;
+        padding: .8em; 
+    }
+    #faq div div:nth-child(1) p{
+        text-align: center;       
+        padding: .3em;
+        
+    } 
+    
+    #faq div div:nth-child(2){
+        margin-top: 1em;
+        padding-left: 0em;    
+        font-size: 1.1em;
+        line-height: 1.3em;   
+    }
+}

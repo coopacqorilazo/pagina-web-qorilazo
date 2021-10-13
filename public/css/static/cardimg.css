@@ -1,0 +1,74 @@
+@import "./styles.css";
+.container-card{
+    width: 90%;
+    background: var(--white);
+    margin: auto;
+}
+.title-card{
+    padding: 1em;
+}
+.body-card{
+    display: flex; 
+    flex-direction: row;  
+}
+.item-card{
+    margin: 1em;
+    width: 33%;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    *background-color: var(--light);
+    border-radius: .5em;
+    padding: 2em;
+    line-height: 3em;
+    color: var(--color-letras);
+    position: relative;
+    border: 2px solid var(--light);
+    box-shadow: 5px 5px 10px var(--light);
+}
+.cont-left{
+    width: 100%;
+    line-height: .5em;    
+}
+.cont-left h3{
+    font-size: 1em;
+    *line-height: .8em;
+    margin-bottom: 1em;
+}
+.cont-left p{
+    font-size: 1em;
+    *line-height: 1em;
+    margin-bottom: 1em;
+}
+.cont-left a{
+    color: var(--orange);
+    text-transform: capitalize;
+    vertical-align: center;
+    position: relative;
+}
+.cont-left a i{
+    padding-left: .5em;
+    position: absolute;
+    top: .3em;
+}
+.cont-left a:hover{
+    font-weight: bold;
+}
+.cont-right{
+    width: 100%;
+   /* position: absolute;
+    right: 0;
+    bottom: -1.5em;*/
+}
+
+@media screen and (max-width: 1150px){
+    .body-card{
+        display: flex; 
+        flex-direction: column;         
+        box-sizing: border-box;  
+    }
+    .item-card{
+        width: 90%;         
+        box-sizing: border-box;
+    }
+}

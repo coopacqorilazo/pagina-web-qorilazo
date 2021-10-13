@@ -1,0 +1,45 @@
+@import "../../styles.css";
+
+.lh-container{
+  padding: 1em;
+}
+.lh-header{
+  width: 100%;
+}
+
+.lh-body{
+  width: 100%;
+	padding: 20px 0;
+	overflow: hidden;
+  scroll-behavior: smooth;
+}
+.lh-list-product{
+  display: flex;
+  
+  *grid-template-columns: repeat(5,1fr);
+	flex-wrap: nowrap;
+}
+
+.lh-body-item{
+  min-width: 14%;
+	transition: .3s ease all;
+	margin:1em;
+  box-shadow: 5px 5px 10px var(--light);
+  border: 1px solid var(--light);
+  padding: 1em;
+  text-align: center;
+  
+}
+.lh-body-item img{
+  width: 3em;
+  display: block;
+  margin: auto;
+}
+
+@media screen and (max-width: 1050px){
+  .lh-list-product{
+    display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1em;
+  }
+}
