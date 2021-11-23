@@ -335,6 +335,13 @@
                             <a href="#">Ag. San Sebastian</a>
                             <a href="#">OAS Pulpera</a>
                             <a href="#">Ag. Livitaca</a>
+                            <a href="#">Ag. Santo Tomas</a>
+                            <a href="#">Ag. Velille</a>
+                            <a href="#">Ag. Anta</a>
+                            <a href="#">Ag. Urubamba</a>
+                            <a href="#">Ag. San Sebastian</a>
+                            <a href="#">OAS Pulpera</a>
+                            <a href="#">Ag. Livitaca</a>
                         </div>
                         <div class="enlaces-subcategoria span-1">
                             <h3 class="subtitulo">Arequipa</h3>
